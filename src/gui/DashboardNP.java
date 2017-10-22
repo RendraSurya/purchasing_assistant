@@ -482,6 +482,19 @@ public class DashboardNP extends javax.swing.JFrame {
             System.out.println(ex.getMessage());
         }
     }
+        
+    public void logout(){
+        int reply = JOptionPane.showConfirmDialog(null, "Apakah anda yakin ingin Logout?", "Logout?",  JOptionPane.YES_NO_OPTION);
+        if (reply == JOptionPane.YES_OPTION)
+        {
+            LoginScreen login = new LoginScreen();
+            login.setVisible(true);
+            this.dispose();
+        }
+        else{
+            getContentPane().requestFocusInWindow();
+        }
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
