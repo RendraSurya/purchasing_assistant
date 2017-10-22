@@ -96,5 +96,12 @@ public class DashboardNPTest {
         table2.cell(row(0).column(1)).requireValue( "Laptop Asus" );
         table2.cell(row(0).column(2)).requireValue( "4" );
     }
+    
+    @Test
+    public void prEmptyTest(){
+        dashw.tabbedPane().selectTab( 1 );
+        dashw.button("submitBtn").click();
+        dashw.optionPane().requireMessage("Data harus diisi dengan lengkap dan benar");
+    }
       
 }
