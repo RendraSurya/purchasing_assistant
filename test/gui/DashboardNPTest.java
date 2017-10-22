@@ -80,5 +80,21 @@ public class DashboardNPTest {
         stockTable.requireVisible();
     }
     
+    @Test
+    public void showMinPRTest(){
+        JTableFixture table1 = dashw.table( "prTable" );
+        table1.cell(row(0).column(0)).requireValue( "1" );
+        table1.cell(row(0).column(1)).requireValue( "Pesan Monitor LG" );
+        table1.cell(row(0).column(2)).requireValue( "Inprogress" );
+    }
+    
+    @Test
+    public void showStockTest(){
+        dashw.tabbedPane().selectTab( 2 );
+        JTableFixture table2 = dashw.table( "stockTable" );
+        table2.cell(row(0).column(0)).requireValue( "KAS4402" );
+        table2.cell(row(0).column(1)).requireValue( "Laptop Asus" );
+        table2.cell(row(0).column(2)).requireValue( "4" );
+    }
       
 }
