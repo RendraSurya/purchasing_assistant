@@ -63,471 +63,462 @@ public class DashboardNP extends javax.swing.JFrame {
 <span class="fc" id="L63">        TableCellEditor utce = new DefaultCellEditor(umc);</span>
 <span class="fc" id="L64">        utc.setCellEditor(utce);</span>
         
-<span class="fc" id="L66">    }</span>
+        
+<span class="fc" id="L67">    }</span>
     
     @SuppressWarnings(&quot;unchecked&quot;)
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="fc" id="L72">        logoutBtn = new javax.swing.JButton();</span>
-<span class="fc" id="L73">        Tab = new javax.swing.JTabbedPane();</span>
-<span class="fc" id="L74">        jDesktopPane1 = new javax.swing.JDesktopPane();</span>
-<span class="fc" id="L75">        scrollDashboard = new javax.swing.JScrollPane();</span>
-<span class="fc" id="L76">        prTable = new javax.swing.JTable();</span>
-<span class="fc" id="L77">        ImageIcon icon2 = new ImageIcon(getClass().getResource(&quot;/image/dashboardNP2.png&quot;)); Image image2 = icon2.getImage();</span>
-<span class="fc" id="L78">        panelPR = new javax.swing.JDesktopPane(){</span>
+<span class="fc" id="L73">        logoutBtn = new javax.swing.JButton();</span>
+<span class="fc" id="L74">        Tab = new javax.swing.JTabbedPane();</span>
+<span class="fc" id="L75">        jDesktopPane1 = new javax.swing.JDesktopPane();</span>
+<span class="fc" id="L76">        scrollDashboard = new javax.swing.JScrollPane();</span>
+<span class="fc" id="L77">        prTable = new javax.swing.JTable();</span>
+<span class="fc" id="L78">        ImageIcon icon2 = new ImageIcon(getClass().getResource(&quot;/image/dashboardNP2.png&quot;)); Image image2 = icon2.getImage();</span>
+<span class="fc" id="L79">        panelPR = new javax.swing.JDesktopPane(){</span>
             public void paintComponent(Graphics g){
-<span class="fc" id="L80">                g.drawImage(image2,0,0,getWidth(),getHeight(),this);</span>
-<span class="fc" id="L81">            }</span>
+<span class="fc" id="L81">                g.drawImage(image2,0,0,getWidth(),getHeight(),this);</span>
+<span class="fc" id="L82">            }</span>
         };
-<span class="fc" id="L83">        prText = new javax.swing.JTextField();</span>
-<span class="fc" id="L84">        userLabel = new javax.swing.JLabel();</span>
-<span class="fc" id="L85">        requestDateLabel = new javax.swing.JLabel();</span>
-<span class="fc" id="L86">        reqDate = new org.jdesktop.swingx.JXDatePicker();</span>
-<span class="fc" id="L87">        receDate = new org.jdesktop.swingx.JXDatePicker();</span>
-<span class="fc" id="L88">        receivingDateLabel = new javax.swing.JLabel();</span>
-<span class="fc" id="L89">        scrollCreatePR = new javax.swing.JScrollPane();</span>
-<span class="fc" id="L90">        createPRTable = new javax.swing.JTable();</span>
-<span class="fc" id="L91">        submitBtn = new javax.swing.JButton();</span>
-<span class="fc" id="L92">        userLabel1 = new javax.swing.JLabel();</span>
-<span class="fc" id="L93">        userID = new javax.swing.JTextField();</span>
-<span class="fc" id="L94">        ImageIcon icon3 = new ImageIcon(getClass().getResource(&quot;/image/dashboardNP3.png&quot;)); Image image3 = icon3.getImage();</span>
-<span class="fc" id="L95">        jDesktopPane3 = new javax.swing.JDesktopPane(){</span>
+<span class="fc" id="L84">        prText = new javax.swing.JTextField();</span>
+<span class="fc" id="L85">        userLabel = new javax.swing.JLabel();</span>
+<span class="fc" id="L86">        requestDateLabel = new javax.swing.JLabel();</span>
+<span class="fc" id="L87">        receivingDateLabel = new javax.swing.JLabel();</span>
+<span class="fc" id="L88">        scrollCreatePR = new javax.swing.JScrollPane();</span>
+<span class="fc" id="L89">        createPRTable = new javax.swing.JTable();</span>
+<span class="fc" id="L90">        submitBtn = new javax.swing.JButton();</span>
+<span class="fc" id="L91">        userLabel1 = new javax.swing.JLabel();</span>
+<span class="fc" id="L92">        userID = new javax.swing.JTextField();</span>
+<span class="fc" id="L93">        reqDate = new org.jdesktop.swingx.JXDatePicker();</span>
+<span class="fc" id="L94">        receDate = new org.jdesktop.swingx.JXDatePicker();</span>
+<span class="fc" id="L95">        ImageIcon icon3 = new ImageIcon(getClass().getResource(&quot;/image/dashboardNP3.png&quot;)); Image image3 = icon3.getImage();</span>
+<span class="fc" id="L96">        jDesktopPane3 = new javax.swing.JDesktopPane(){</span>
             public void paintComponent(Graphics g){
-<span class="fc" id="L97">                g.drawImage(image3,0,0,getWidth(),getHeight(),this);</span>
-<span class="fc" id="L98">            }</span>
+<span class="fc" id="L98">                g.drawImage(image3,0,0,getWidth(),getHeight(),this);</span>
+<span class="fc" id="L99">            }</span>
         };
-<span class="fc" id="L100">        masterStockLabel = new javax.swing.JLabel();</span>
-<span class="fc" id="L101">        dateStockLabel = new javax.swing.JLabel();</span>
-<span class="fc" id="L102">        scrollStock = new javax.swing.JScrollPane();</span>
-<span class="fc" id="L103">        stockTable = new javax.swing.JTable();</span>
+<span class="fc" id="L101">        masterStockLabel = new javax.swing.JLabel();</span>
+<span class="fc" id="L102">        dateStockLabel = new javax.swing.JLabel();</span>
+<span class="fc" id="L103">        scrollStock = new javax.swing.JScrollPane();</span>
+<span class="fc" id="L104">        stockTable = new javax.swing.JTable();</span>
 
-<span class="fc" id="L105">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
-<span class="fc" id="L106">        setTitle(&quot;Purchasing Assistant&quot;);</span>
-<span class="fc" id="L107">        setResizable(false);</span>
-<span class="fc" id="L108">        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());</span>
+<span class="fc" id="L106">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L107">        setTitle(&quot;Purchasing Assistant&quot;);</span>
+<span class="fc" id="L108">        setResizable(false);</span>
+<span class="fc" id="L109">        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());</span>
 
-<span class="fc" id="L110">        logoutBtn.setBackground(new java.awt.Color(255, 0, 0));</span>
-<span class="fc" id="L111">        logoutBtn.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 17)); // NOI18N</span>
-<span class="fc" id="L112">        logoutBtn.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L113">        logoutBtn.setText(&quot;Logout&quot;);</span>
-<span class="fc" id="L114">        logoutBtn.setToolTipText(&quot;&quot;);</span>
-<span class="fc" id="L115">        logoutBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 1, true));</span>
-<span class="fc" id="L116">        logoutBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);</span>
-<span class="fc" id="L117">        logoutBtn.setName(&quot;logoutBtn&quot;); // NOI18N</span>
-<span class="fc" id="L118">        logoutBtn.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L111">        logoutBtn.setBackground(new java.awt.Color(255, 0, 0));</span>
+<span class="fc" id="L112">        logoutBtn.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 17)); // NOI18N</span>
+<span class="fc" id="L113">        logoutBtn.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L114">        logoutBtn.setText(&quot;Logout&quot;);</span>
+<span class="fc" id="L115">        logoutBtn.setToolTipText(&quot;&quot;);</span>
+<span class="fc" id="L116">        logoutBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 1, true));</span>
+<span class="fc" id="L117">        logoutBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);</span>
+<span class="fc" id="L118">        logoutBtn.setName(&quot;logoutBtn&quot;); // NOI18N</span>
+<span class="fc" id="L119">        logoutBtn.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="fc" id="L120">                logoutBtnActionPerformed(evt);</span>
-<span class="fc" id="L121">            }</span>
+<span class="fc" id="L121">                logoutBtnActionPerformed(evt);</span>
+<span class="fc" id="L122">            }</span>
         });
-<span class="fc" id="L123">        getContentPane().add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(695, 6, 95, 25));</span>
+<span class="fc" id="L124">        getContentPane().add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(695, 6, 95, 25));</span>
 
-<span class="fc" id="L125">        Tab.setBackground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L126">        Tab.setAlignmentX(0.8F);</span>
-<span class="fc" id="L127">        Tab.setFocusable(false);</span>
-<span class="fc" id="L128">        Tab.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 18)); // NOI18N</span>
-<span class="fc" id="L129">        Tab.setInheritsPopupMenu(true);</span>
-<span class="fc" id="L130">        Tab.setName(&quot;Tab&quot;); // NOI18N</span>
-<span class="fc" id="L131">        Tab.setPreferredSize(new java.awt.Dimension(800, 600));</span>
+<span class="fc" id="L126">        Tab.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L127">        Tab.setAlignmentX(0.8F);</span>
+<span class="fc" id="L128">        Tab.setFocusable(false);</span>
+<span class="fc" id="L129">        Tab.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 18)); // NOI18N</span>
+<span class="fc" id="L130">        Tab.setInheritsPopupMenu(true);</span>
+<span class="fc" id="L131">        Tab.setName(&quot;Tab&quot;); // NOI18N</span>
+<span class="fc" id="L132">        Tab.setPreferredSize(new java.awt.Dimension(800, 600));</span>
 
-<span class="fc" id="L133">        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L134">        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));</span>
 
-<span class="fc" id="L135">        scrollDashboard.setBorder(null);</span>
-<span class="fc" id="L136">        scrollDashboard.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 24)); // NOI18N</span>
-<span class="fc" id="L137">        scrollDashboard.setOpaque(false);</span>
+<span class="fc" id="L136">        scrollDashboard.setBorder(null);</span>
+<span class="fc" id="L137">        scrollDashboard.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 24)); // NOI18N</span>
+<span class="fc" id="L138">        scrollDashboard.setOpaque(false);</span>
 
-<span class="fc" id="L139">        prTable.setModel(new javax.swing.table.DefaultTableModel(</span>
+<span class="fc" id="L140">        prTable.setModel(new javax.swing.table.DefaultTableModel(</span>
             new Object [][] {
 
             },
             new String [] {
                 &quot;Purchase Request ID&quot;, &quot;Purchase Request Name&quot;, &quot;Status Purchase Request&quot;
             }
-<span class="fc" id="L146">        ) {</span>
-<span class="fc" id="L147">            Class[] types = new Class [] {</span>
+<span class="fc" id="L147">        ) {</span>
+<span class="fc" id="L148">            Class[] types = new Class [] {</span>
                 java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
-<span class="fc" id="L150">            boolean[] canEdit = new boolean [] {</span>
+<span class="fc" id="L151">            boolean[] canEdit = new boolean [] {</span>
                 false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
-<span class="nc" id="L155">                return types [columnIndex];</span>
+<span class="nc" id="L156">                return types [columnIndex];</span>
             }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-<span class="nc" id="L159">                return canEdit [columnIndex];</span>
+<span class="nc" id="L160">                return canEdit [columnIndex];</span>
             }
         });
-<span class="fc" id="L162">        prTable.setEnabled(false);</span>
-<span class="fc" id="L163">        prTable.setIntercellSpacing(new java.awt.Dimension(1, 10));</span>
-<span class="fc" id="L164">        prTable.setName(&quot;prTable&quot;); // NOI18N</span>
-<span class="fc" id="L165">        prTable.setRowHeight(60);</span>
-<span class="fc" id="L166">        scrollDashboard.setViewportView(prTable);</span>
+<span class="fc" id="L163">        prTable.setEnabled(false);</span>
+<span class="fc" id="L164">        prTable.setIntercellSpacing(new java.awt.Dimension(1, 10));</span>
+<span class="fc" id="L165">        prTable.setName(&quot;prTable&quot;); // NOI18N</span>
+<span class="fc" id="L166">        prTable.setRowHeight(60);</span>
+<span class="fc" id="L167">        scrollDashboard.setViewportView(prTable);</span>
 
-<span class="fc" id="L168">        jDesktopPane1.setLayer(scrollDashboard, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
+<span class="fc" id="L169">        jDesktopPane1.setLayer(scrollDashboard, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
 
-<span class="fc" id="L170">        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);</span>
-<span class="fc" id="L171">        jDesktopPane1.setLayout(jDesktopPane1Layout);</span>
-<span class="fc" id="L172">        jDesktopPane1Layout.setHorizontalGroup(</span>
-<span class="fc" id="L173">            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L174">            .addGap(0, 795, Short.MAX_VALUE)</span>
-<span class="fc" id="L175">            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L176">                .addGroup(jDesktopPane1Layout.createSequentialGroup()</span>
-<span class="fc" id="L177">                    .addGap(0, 0, Short.MAX_VALUE)</span>
-<span class="fc" id="L178">                    .addComponent(scrollDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="fc" id="L179">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
+<span class="fc" id="L171">        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);</span>
+<span class="fc" id="L172">        jDesktopPane1.setLayout(jDesktopPane1Layout);</span>
+<span class="fc" id="L173">        jDesktopPane1Layout.setHorizontalGroup(</span>
+<span class="fc" id="L174">            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L175">            .addGap(0, 795, Short.MAX_VALUE)</span>
+<span class="fc" id="L176">            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L177">                .addGroup(jDesktopPane1Layout.createSequentialGroup()</span>
+<span class="fc" id="L178">                    .addGap(0, 0, Short.MAX_VALUE)</span>
+<span class="fc" id="L179">                    .addComponent(scrollDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L180">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
         );
-<span class="fc" id="L181">        jDesktopPane1Layout.setVerticalGroup(</span>
-<span class="fc" id="L182">            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L183">            .addGap(0, 564, Short.MAX_VALUE)</span>
-<span class="fc" id="L184">            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L185">                .addGroup(jDesktopPane1Layout.createSequentialGroup()</span>
-<span class="fc" id="L186">                    .addGap(0, 37, Short.MAX_VALUE)</span>
-<span class="fc" id="L187">                    .addComponent(scrollDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="fc" id="L188">                    .addGap(0, 37, Short.MAX_VALUE)))</span>
+<span class="fc" id="L182">        jDesktopPane1Layout.setVerticalGroup(</span>
+<span class="fc" id="L183">            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L184">            .addGap(0, 564, Short.MAX_VALUE)</span>
+<span class="fc" id="L185">            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L186">                .addGroup(jDesktopPane1Layout.createSequentialGroup()</span>
+<span class="fc" id="L187">                    .addGap(0, 37, Short.MAX_VALUE)</span>
+<span class="fc" id="L188">                    .addComponent(scrollDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L189">                    .addGap(0, 37, Short.MAX_VALUE)))</span>
         );
 
-<span class="fc" id="L191">        Tab.addTab(&quot;Dashboard&quot;, jDesktopPane1);</span>
+<span class="fc" id="L192">        Tab.addTab(&quot;Dashboard&quot;, jDesktopPane1);</span>
 
-<span class="fc" id="L193">        panelPR.setBackground(new java.awt.Color(153, 153, 153));</span>
-<span class="fc" id="L194">        panelPR.setMinimumSize(new java.awt.Dimension(20, 20));</span>
-<span class="fc" id="L195">        panelPR.setName(&quot;panelPR&quot;); // NOI18N</span>
-<span class="fc" id="L196">        panelPR.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());</span>
+<span class="fc" id="L194">        panelPR.setBackground(new java.awt.Color(153, 153, 153));</span>
+<span class="fc" id="L195">        panelPR.setMinimumSize(new java.awt.Dimension(20, 20));</span>
+<span class="fc" id="L196">        panelPR.setName(&quot;panelPR&quot;); // NOI18N</span>
+<span class="fc" id="L197">        panelPR.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());</span>
 
-<span class="fc" id="L198">        prText.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L199">        prText.setText(&quot;Nama Purchase Request&quot;);</span>
-<span class="fc" id="L200">        prText.setBorder(null);</span>
-<span class="fc" id="L201">        prText.setName(&quot;prText&quot;); // NOI18N</span>
-<span class="fc" id="L202">        prText.setOpaque(false);</span>
-<span class="fc" id="L203">        prText.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="fc" id="L199">        prText.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
+<span class="fc" id="L200">        prText.setText(&quot;Nama Purchase Request&quot;);</span>
+<span class="fc" id="L201">        prText.setBorder(null);</span>
+<span class="fc" id="L202">        prText.setName(&quot;prText&quot;); // NOI18N</span>
+<span class="fc" id="L203">        prText.setOpaque(false);</span>
+<span class="fc" id="L204">        prText.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusGained(java.awt.event.FocusEvent evt) {
-<span class="fc" id="L205">                prTextFocusGained(evt);</span>
-<span class="fc" id="L206">            }</span>
+<span class="fc" id="L206">                prTextFocusGained(evt);</span>
+<span class="fc" id="L207">            }</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="fc" id="L208">                prTextFocusLost(evt);</span>
-<span class="fc" id="L209">            }</span>
+<span class="fc" id="L209">                prTextFocusLost(evt);</span>
+<span class="fc" id="L210">            }</span>
         });
-<span class="fc" id="L211">        panelPR.add(prText, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 211, 35));</span>
+<span class="fc" id="L212">        panelPR.add(prText, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 211, 35));</span>
 
-<span class="fc" id="L213">        userLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L214">        userLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="fc" id="L215">        userLabel.setText(&quot;PR Name&quot;);</span>
-<span class="fc" id="L216">        panelPR.add(userLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));</span>
+<span class="fc" id="L214">        userLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
+<span class="fc" id="L215">        userLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="fc" id="L216">        userLabel.setText(&quot;PR Name&quot;);</span>
+<span class="fc" id="L217">        panelPR.add(userLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));</span>
 
-<span class="fc" id="L218">        requestDateLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L219">        requestDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="fc" id="L220">        requestDateLabel.setText(&quot;Request Date&quot;);</span>
-<span class="fc" id="L221">        panelPR.add(requestDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));</span>
+<span class="fc" id="L219">        requestDateLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
+<span class="fc" id="L220">        requestDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="fc" id="L221">        requestDateLabel.setText(&quot;Request Date&quot;);</span>
+<span class="fc" id="L222">        panelPR.add(requestDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));</span>
 
-<span class="fc" id="L223">        reqDate.setFocusable(false);</span>
-<span class="fc" id="L224">        reqDate.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L225">        reqDate.setName(&quot;reqDate&quot;); // NOI18N</span>
-<span class="fc" id="L226">        panelPR.add(reqDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 106, 211, 35));</span>
+<span class="fc" id="L224">        receivingDateLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
+<span class="fc" id="L225">        receivingDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="fc" id="L226">        receivingDateLabel.setText(&quot;Receiving Date&quot;);</span>
+<span class="fc" id="L227">        panelPR.add(receivingDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 159, -1, -1));</span>
 
-<span class="fc" id="L228">        receDate.setFocusable(false);</span>
-<span class="fc" id="L229">        receDate.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L230">        receDate.setName(&quot;receDate&quot;); // NOI18N</span>
-<span class="fc" id="L231">        panelPR.add(receDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 151, 211, 35));</span>
+<span class="fc" id="L229">        scrollCreatePR.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L230">        scrollCreatePR.setBorder(null);</span>
+<span class="fc" id="L231">        scrollCreatePR.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 24)); // NOI18N</span>
+<span class="fc" id="L232">        scrollCreatePR.setOpaque(false);</span>
 
-<span class="fc" id="L233">        receivingDateLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L234">        receivingDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="fc" id="L235">        receivingDateLabel.setText(&quot;Receiving Date&quot;);</span>
-<span class="fc" id="L236">        panelPR.add(receivingDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 159, -1, -1));</span>
-
-<span class="fc" id="L238">        scrollCreatePR.setBackground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L239">        scrollCreatePR.setBorder(null);</span>
-<span class="fc" id="L240">        scrollCreatePR.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 24)); // NOI18N</span>
-<span class="fc" id="L241">        scrollCreatePR.setOpaque(false);</span>
-
-<span class="fc" id="L243">        createPRTable.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 18)); // NOI18N</span>
-<span class="fc" id="L244">        createPRTable.setModel(new javax.swing.table.DefaultTableModel(</span>
+<span class="fc" id="L234">        createPRTable.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 18)); // NOI18N</span>
+<span class="fc" id="L235">        createPRTable.setModel(new javax.swing.table.DefaultTableModel(</span>
             new Object [][] {
                 {&quot;Item ID&quot;, &quot;Nama Barang&quot;,  new Integer(1), &quot;Pengukuran&quot;, &quot;Tulis Keterangan&quot;}
             },
             new String [] {
                 &quot;Item ID&quot;, &quot;Item Name&quot;, &quot;Quantity&quot;, &quot;UM&quot;, &quot;Remark&quot;
             }
-<span class="fc" id="L251">        ) {</span>
-<span class="fc" id="L252">            Class[] types = new Class [] {</span>
+<span class="fc" id="L242">        ) {</span>
+<span class="fc" id="L243">            Class[] types = new Class [] {</span>
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
-<span class="fc" id="L257">                return types [columnIndex];</span>
+<span class="fc" id="L248">                return types [columnIndex];</span>
             }
         });
-<span class="fc" id="L260">        createPRTable.setToolTipText(&quot;&quot;);</span>
-<span class="fc" id="L261">        createPRTable.setAlignmentY(1.2F);</span>
-<span class="fc" id="L262">        createPRTable.setGridColor(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L263">        createPRTable.setName(&quot;createPRTable&quot;); // NOI18N</span>
-<span class="fc" id="L264">        createPRTable.setRowHeight(27);</span>
-<span class="fc" id="L265">        createPRTable.getTableHeader().setReorderingAllowed(false);</span>
-<span class="fc" id="L266">        scrollCreatePR.setViewportView(createPRTable);</span>
-<span class="pc bpc" id="L267" title="1 of 2 branches missed.">        if (createPRTable.getColumnModel().getColumnCount() &gt; 0) {</span>
-<span class="fc" id="L268">            createPRTable.getColumnModel().getColumn(0).setResizable(false);</span>
-<span class="fc" id="L269">            createPRTable.getColumnModel().getColumn(1).setResizable(false);</span>
-<span class="fc" id="L270">            createPRTable.getColumnModel().getColumn(2).setResizable(false);</span>
-<span class="fc" id="L271">            createPRTable.getColumnModel().getColumn(3).setResizable(false);</span>
-<span class="fc" id="L272">            createPRTable.getColumnModel().getColumn(4).setResizable(false);</span>
+<span class="fc" id="L251">        createPRTable.setToolTipText(&quot;&quot;);</span>
+<span class="fc" id="L252">        createPRTable.setAlignmentY(1.2F);</span>
+<span class="fc" id="L253">        createPRTable.setGridColor(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L254">        createPRTable.setName(&quot;createPRTable&quot;); // NOI18N</span>
+<span class="fc" id="L255">        createPRTable.setRowHeight(27);</span>
+<span class="fc" id="L256">        createPRTable.getTableHeader().setReorderingAllowed(false);</span>
+<span class="fc" id="L257">        scrollCreatePR.setViewportView(createPRTable);</span>
+<span class="pc bpc" id="L258" title="1 of 2 branches missed.">        if (createPRTable.getColumnModel().getColumnCount() &gt; 0) {</span>
+<span class="fc" id="L259">            createPRTable.getColumnModel().getColumn(0).setResizable(false);</span>
+<span class="fc" id="L260">            createPRTable.getColumnModel().getColumn(1).setResizable(false);</span>
+<span class="fc" id="L261">            createPRTable.getColumnModel().getColumn(2).setResizable(false);</span>
+<span class="fc" id="L262">            createPRTable.getColumnModel().getColumn(3).setResizable(false);</span>
+<span class="fc" id="L263">            createPRTable.getColumnModel().getColumn(4).setResizable(false);</span>
         }
 
-<span class="fc" id="L275">        panelPR.add(scrollCreatePR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 248, 777, 240));</span>
+<span class="fc" id="L266">        panelPR.add(scrollCreatePR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 248, 777, 240));</span>
 
-<span class="fc" id="L277">        submitBtn.setBackground(new java.awt.Color(0, 153, 255));</span>
-<span class="fc" id="L278">        submitBtn.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 17)); // NOI18N</span>
-<span class="fc" id="L279">        submitBtn.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="fc" id="L280">        submitBtn.setText(&quot;Submit&quot;);</span>
-<span class="fc" id="L281">        submitBtn.setToolTipText(&quot;&quot;);</span>
-<span class="fc" id="L282">        submitBtn.setBorder(null);</span>
-<span class="fc" id="L283">        submitBtn.setName(&quot;submitBtn&quot;); // NOI18N</span>
-<span class="fc" id="L284">        submitBtn.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L268">        submitBtn.setBackground(new java.awt.Color(0, 153, 255));</span>
+<span class="fc" id="L269">        submitBtn.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 17)); // NOI18N</span>
+<span class="fc" id="L270">        submitBtn.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L271">        submitBtn.setText(&quot;Submit&quot;);</span>
+<span class="fc" id="L272">        submitBtn.setToolTipText(&quot;&quot;);</span>
+<span class="fc" id="L273">        submitBtn.setBorder(null);</span>
+<span class="fc" id="L274">        submitBtn.setName(&quot;submitBtn&quot;); // NOI18N</span>
+<span class="fc" id="L275">        submitBtn.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="fc" id="L286">                submitBtnActionPerformed(evt);</span>
-<span class="fc" id="L287">            }</span>
+<span class="fc" id="L277">                submitBtnActionPerformed(evt);</span>
+<span class="fc" id="L278">            }</span>
         });
-<span class="fc" id="L289">        panelPR.add(submitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 520, 95, 31));</span>
+<span class="fc" id="L280">        panelPR.add(submitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 520, 95, 31));</span>
 
-<span class="fc" id="L291">        userLabel1.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L292">        userLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="fc" id="L293">        userLabel1.setText(&quot;User ID&quot;);</span>
-<span class="fc" id="L294">        panelPR.add(userLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 67, -1, -1));</span>
+<span class="fc" id="L282">        userLabel1.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
+<span class="fc" id="L283">        userLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="fc" id="L284">        userLabel1.setText(&quot;User ID&quot;);</span>
+<span class="fc" id="L285">        panelPR.add(userLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 67, -1, -1));</span>
 
-<span class="fc" id="L296">        userID.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L297">        userID.setText(&quot;ID Requester&quot;);</span>
-<span class="fc" id="L298">        userID.setBorder(null);</span>
-<span class="fc" id="L299">        userID.setName(&quot;userID&quot;); // NOI18N</span>
-<span class="fc" id="L300">        userID.setOpaque(false);</span>
-<span class="fc" id="L301">        userID.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="fc" id="L287">        userID.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
+<span class="fc" id="L288">        userID.setText(&quot;ID Requester&quot;);</span>
+<span class="fc" id="L289">        userID.setBorder(null);</span>
+<span class="fc" id="L290">        userID.setName(&quot;userID&quot;); // NOI18N</span>
+<span class="fc" id="L291">        userID.setOpaque(false);</span>
+<span class="fc" id="L292">        userID.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusGained(java.awt.event.FocusEvent evt) {
-<span class="fc" id="L303">                userIDFocusGained(evt);</span>
-<span class="fc" id="L304">            }</span>
+<span class="fc" id="L294">                userIDFocusGained(evt);</span>
+<span class="fc" id="L295">            }</span>
         });
-<span class="fc" id="L306">        panelPR.add(userID, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 59, 211, 35));</span>
+<span class="fc" id="L297">        panelPR.add(userID, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 59, 211, 35));</span>
 
-<span class="fc" id="L308">        Tab.addTab(&quot;Purchase Request&quot;, panelPR);</span>
+<span class="fc" id="L299">        reqDate.setName(&quot;reqDate&quot;); // NOI18N</span>
+<span class="fc" id="L300">        panelPR.add(reqDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 106, 211, 35));</span>
 
-<span class="fc" id="L310">        masterStockLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 30)); // NOI18N</span>
-<span class="fc" id="L311">        masterStockLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="fc" id="L312">        masterStockLabel.setText(&quot;Master Stock From Warehouse&quot;);</span>
+<span class="fc" id="L302">        receDate.setName(&quot;receDate&quot;); // NOI18N</span>
+<span class="fc" id="L303">        panelPR.add(receDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 151, 211, 35));</span>
 
-<span class="fc" id="L314">        dateStockLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
-<span class="fc" id="L315">        dateStockLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="fc" id="L316">        dateStockLabel.setText(&quot;Date&quot;);</span>
-<span class="fc" id="L317">        dateStockLabel.setName(&quot;dateStockLabel&quot;); // NOI18N</span>
+<span class="fc" id="L305">        Tab.addTab(&quot;Purchase Request&quot;, panelPR);</span>
 
-<span class="fc" id="L319">        scrollStock.setBorder(null);</span>
-<span class="fc" id="L320">        scrollStock.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 24)); // NOI18N</span>
-<span class="fc" id="L321">        scrollStock.setOpaque(false);</span>
+<span class="fc" id="L307">        masterStockLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 30)); // NOI18N</span>
+<span class="fc" id="L308">        masterStockLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="fc" id="L309">        masterStockLabel.setText(&quot;Master Stock From Warehouse&quot;);</span>
 
-<span class="fc" id="L323">        stockTable.setModel(new javax.swing.table.DefaultTableModel(</span>
+<span class="fc" id="L311">        dateStockLabel.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14)); // NOI18N</span>
+<span class="fc" id="L312">        dateStockLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="fc" id="L313">        dateStockLabel.setText(&quot;Date&quot;);</span>
+<span class="fc" id="L314">        dateStockLabel.setName(&quot;dateStockLabel&quot;); // NOI18N</span>
+
+<span class="fc" id="L316">        scrollStock.setBorder(null);</span>
+<span class="fc" id="L317">        scrollStock.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 24)); // NOI18N</span>
+<span class="fc" id="L318">        scrollStock.setOpaque(false);</span>
+
+<span class="fc" id="L320">        stockTable.setModel(new javax.swing.table.DefaultTableModel(</span>
             new Object [][] {
 
             },
             new String [] {
                 &quot;Item ID&quot;, &quot;Item Name&quot;, &quot;Ending Stock&quot;
             }
-<span class="fc" id="L330">        ) {</span>
-<span class="fc" id="L331">            Class[] types = new Class [] {</span>
+<span class="fc" id="L327">        ) {</span>
+<span class="fc" id="L328">            Class[] types = new Class [] {</span>
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
-<span class="fc" id="L334">            boolean[] canEdit = new boolean [] {</span>
+<span class="fc" id="L331">            boolean[] canEdit = new boolean [] {</span>
                 false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
-<span class="nc" id="L339">                return types [columnIndex];</span>
+<span class="nc" id="L336">                return types [columnIndex];</span>
             }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-<span class="nc" id="L343">                return canEdit [columnIndex];</span>
+<span class="nc" id="L340">                return canEdit [columnIndex];</span>
             }
         });
-<span class="fc" id="L346">        stockTable.setEnabled(false);</span>
-<span class="fc" id="L347">        stockTable.setName(&quot;stockTable&quot;); // NOI18N</span>
-<span class="fc" id="L348">        stockTable.setRowHeight(30);</span>
-<span class="fc" id="L349">        scrollStock.setViewportView(stockTable);</span>
+<span class="fc" id="L343">        stockTable.setEnabled(false);</span>
+<span class="fc" id="L344">        stockTable.setName(&quot;stockTable&quot;); // NOI18N</span>
+<span class="fc" id="L345">        stockTable.setRowHeight(30);</span>
+<span class="fc" id="L346">        scrollStock.setViewportView(stockTable);</span>
 
-<span class="fc" id="L351">        jDesktopPane3.setLayer(masterStockLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
-<span class="fc" id="L352">        jDesktopPane3.setLayer(dateStockLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
-<span class="fc" id="L353">        jDesktopPane3.setLayer(scrollStock, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
+<span class="fc" id="L348">        jDesktopPane3.setLayer(masterStockLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
+<span class="fc" id="L349">        jDesktopPane3.setLayer(dateStockLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
+<span class="fc" id="L350">        jDesktopPane3.setLayer(scrollStock, javax.swing.JLayeredPane.DEFAULT_LAYER);</span>
 
-<span class="fc" id="L355">        javax.swing.GroupLayout jDesktopPane3Layout = new javax.swing.GroupLayout(jDesktopPane3);</span>
-<span class="fc" id="L356">        jDesktopPane3.setLayout(jDesktopPane3Layout);</span>
-<span class="fc" id="L357">        jDesktopPane3Layout.setHorizontalGroup(</span>
-<span class="fc" id="L358">            jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L359">            .addGap(0, 795, Short.MAX_VALUE)</span>
-<span class="fc" id="L360">            .addGroup(jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L361">                .addGroup(jDesktopPane3Layout.createSequentialGroup()</span>
-<span class="fc" id="L362">                    .addGap(0, 0, Short.MAX_VALUE)</span>
-<span class="fc" id="L363">                    .addGroup(jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L352">        javax.swing.GroupLayout jDesktopPane3Layout = new javax.swing.GroupLayout(jDesktopPane3);</span>
+<span class="fc" id="L353">        jDesktopPane3.setLayout(jDesktopPane3Layout);</span>
+<span class="fc" id="L354">        jDesktopPane3Layout.setHorizontalGroup(</span>
+<span class="fc" id="L355">            jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L356">            .addGap(0, 795, Short.MAX_VALUE)</span>
+<span class="fc" id="L357">            .addGroup(jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L358">                .addGroup(jDesktopPane3Layout.createSequentialGroup()</span>
+<span class="fc" id="L359">                    .addGap(0, 0, Short.MAX_VALUE)</span>
+<span class="fc" id="L360">                    .addGroup(jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L361">                        .addGroup(jDesktopPane3Layout.createSequentialGroup()</span>
+<span class="fc" id="L362">                            .addGap(183, 183, 183)</span>
+<span class="fc" id="L363">                            .addComponent(masterStockLabel))</span>
 <span class="fc" id="L364">                        .addGroup(jDesktopPane3Layout.createSequentialGroup()</span>
-<span class="fc" id="L365">                            .addGap(183, 183, 183)</span>
-<span class="fc" id="L366">                            .addComponent(masterStockLabel))</span>
-<span class="fc" id="L367">                        .addGroup(jDesktopPane3Layout.createSequentialGroup()</span>
-<span class="fc" id="L368">                            .addGap(10, 10, 10)</span>
-<span class="fc" id="L369">                            .addComponent(dateStockLabel))</span>
-<span class="fc" id="L370">                        .addComponent(scrollStock, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="fc" id="L371">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
+<span class="fc" id="L365">                            .addGap(10, 10, 10)</span>
+<span class="fc" id="L366">                            .addComponent(dateStockLabel))</span>
+<span class="fc" id="L367">                        .addComponent(scrollStock, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="fc" id="L368">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
         );
-<span class="fc" id="L373">        jDesktopPane3Layout.setVerticalGroup(</span>
-<span class="fc" id="L374">            jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L375">            .addGap(0, 564, Short.MAX_VALUE)</span>
-<span class="fc" id="L376">            .addGroup(jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L377">                .addGroup(jDesktopPane3Layout.createSequentialGroup()</span>
-<span class="fc" id="L378">                    .addGap(0, 0, Short.MAX_VALUE)</span>
-<span class="fc" id="L379">                    .addComponent(masterStockLabel)</span>
-<span class="fc" id="L380">                    .addGap(31, 31, 31)</span>
-<span class="fc" id="L381">                    .addComponent(dateStockLabel)</span>
-<span class="fc" id="L382">                    .addGap(21, 21, 21)</span>
-<span class="fc" id="L383">                    .addComponent(scrollStock, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="fc" id="L384">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
+<span class="fc" id="L370">        jDesktopPane3Layout.setVerticalGroup(</span>
+<span class="fc" id="L371">            jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L372">            .addGap(0, 564, Short.MAX_VALUE)</span>
+<span class="fc" id="L373">            .addGroup(jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L374">                .addGroup(jDesktopPane3Layout.createSequentialGroup()</span>
+<span class="fc" id="L375">                    .addGap(0, 0, Short.MAX_VALUE)</span>
+<span class="fc" id="L376">                    .addComponent(masterStockLabel)</span>
+<span class="fc" id="L377">                    .addGap(31, 31, 31)</span>
+<span class="fc" id="L378">                    .addComponent(dateStockLabel)</span>
+<span class="fc" id="L379">                    .addGap(21, 21, 21)</span>
+<span class="fc" id="L380">                    .addComponent(scrollStock, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L381">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
         );
 
-<span class="fc" id="L387">        Tab.addTab(&quot;Warehouse&quot;, jDesktopPane3);</span>
+<span class="fc" id="L384">        Tab.addTab(&quot;Warehouse&quot;, jDesktopPane3);</span>
 
-<span class="fc" id="L389">        getContentPane().add(Tab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));</span>
-<span class="fc" id="L390">        Tab.getAccessibleContext().setAccessibleName(&quot;Tab&quot;);</span>
-<span class="fc" id="L391">        Tab.getAccessibleContext().setAccessibleDescription(&quot;&quot;);</span>
+<span class="fc" id="L386">        getContentPane().add(Tab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));</span>
+<span class="fc" id="L387">        Tab.getAccessibleContext().setAccessibleName(&quot;Tab&quot;);</span>
+<span class="fc" id="L388">        Tab.getAccessibleContext().setAccessibleDescription(&quot;&quot;);</span>
 
-<span class="fc" id="L393">        pack();</span>
-<span class="fc" id="L394">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="fc" id="L390">        pack();</span>
+<span class="fc" id="L391">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
     private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
         // TODO add your handling code here:
-<span class="fc" id="L398">        logout();</span>
-<span class="fc" id="L399">    }//GEN-LAST:event_logoutBtnActionPerformed</span>
-
-    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
-        // TODO add your handling code here:
-<span class="fc" id="L403">        String itemID = createPRTable.getValueAt(0, 0).toString();</span>
-<span class="fc" id="L404">        String itemName = createPRTable.getValueAt(0, 1).toString();</span>
-<span class="fc" id="L405">        int itemQuant = Integer.parseInt(createPRTable.getValueAt(0, 2).toString());</span>
-<span class="fc" id="L406">        String pengukuran = createPRTable.getValueAt(0, 3).toString();</span>
-<span class="fc" id="L407">        String remark = createPRTable.getValueAt(0, 4).toString();</span>
-<span class="pc bpc" id="L408" title="3 of 6 branches missed.">        if(prText.getText().equalsIgnoreCase(&quot;&quot;) || userID.getText().equalsIgnoreCase(&quot;&quot;) || reqDate.getDate()==null || </span>
-<span class="pc bpc" id="L409" title="2 of 6 branches missed.">                receDate.getDate()==null || itemID.equalsIgnoreCase(&quot;&quot;) || itemName.equalsIgnoreCase(&quot;Nama Barang&quot;) || </span>
-<span class="pc bpc" id="L410" title="4 of 8 branches missed.">                itemName.equalsIgnoreCase(&quot;&quot;) || remark.equalsIgnoreCase(&quot;&quot;) || remark.equalsIgnoreCase(&quot;Tulis Keterangan&quot;)|| </span>
-<span class="pc bpc" id="L411" title="1 of 2 branches missed.">                itemQuant==0 || isNumeric(userID.getText())==false ){</span>
-<span class="fc" id="L412">           JOptionPane.showMessageDialog(null, &quot;Data harus diisi dengan lengkap dan benar&quot;);</span>
-        }
-        else{
-<span class="fc" id="L415">            createPR();</span>
-<span class="fc" id="L416">            JOptionPane.showMessageDialog(null, &quot;Data Tersimpan&quot;);</span>
-<span class="fc" id="L417">            showMinPR();</span>
-<span class="fc" id="L418">            createPRTable.setFocusable(false);</span>
-<span class="fc" id="L419">            prText.setText(&quot;Nama Purchase Request&quot;);</span>
-<span class="fc" id="L420">            userID.setText(&quot;ID Requester &quot;);</span>
-<span class="fc" id="L421">            createPRTable.setValueAt(&quot;ItemID&quot;, 0, 0);</span>
-<span class="fc" id="L422">            createPRTable.setValueAt(&quot;Nama Barang&quot;, 0, 1);</span>
-<span class="fc" id="L423">            createPRTable.setValueAt(&quot;1&quot;, 0, 2);</span>
-<span class="fc" id="L424">            createPRTable.setValueAt(&quot;Pengukuran&quot;, 0, 3);</span>
-<span class="fc" id="L425">            createPRTable.setValueAt(&quot;Tulis Keterangan&quot;, 0, 4);</span>
-        }
-<span class="fc" id="L427">    }//GEN-LAST:event_submitBtnActionPerformed</span>
+<span class="fc" id="L395">        logout();</span>
+<span class="fc" id="L396">    }//GEN-LAST:event_logoutBtnActionPerformed</span>
 
     private void prTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_prTextFocusGained
         // TODO add your handling code here:
-<span class="pc bpc" id="L431" title="1 of 2 branches missed.">        if(prText.getText().equals(&quot;Nama Purchase Request&quot;)){</span>
-<span class="fc" id="L432">            prText.setText(&quot;&quot;);</span>
+<span class="pc bpc" id="L400" title="1 of 2 branches missed.">        if(prText.getText().equals(&quot;Nama Purchase Request&quot;)){</span>
+<span class="fc" id="L401">            prText.setText(&quot;&quot;);</span>
         }
-<span class="fc" id="L434">    }//GEN-LAST:event_prTextFocusGained</span>
+<span class="fc" id="L403">    }//GEN-LAST:event_prTextFocusGained</span>
 
     private void prTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_prTextFocusLost
         // TODO add your handling code here:
-<span class="fc" id="L438">    }//GEN-LAST:event_prTextFocusLost</span>
+<span class="fc" id="L407">    }//GEN-LAST:event_prTextFocusLost</span>
 
     private void userIDFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userIDFocusGained
         // TODO add your handling code here:
-<span class="pc bpc" id="L442" title="1 of 2 branches missed.">        if(userID.getText().equals(&quot;ID Requester&quot;)){</span>
-<span class="fc" id="L443">            userID.setText(&quot;&quot;);</span>
+<span class="pc bpc" id="L411" title="1 of 2 branches missed.">        if(userID.getText().equals(&quot;ID Requester&quot;)){</span>
+<span class="fc" id="L412">            userID.setText(&quot;&quot;);</span>
         }
-<span class="fc" id="L445">    }//GEN-LAST:event_userIDFocusGained</span>
+<span class="fc" id="L414">    }//GEN-LAST:event_userIDFocusGained</span>
+
+    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
+<span class="fc" id="L417">        String itemID = createPRTable.getValueAt(0, 0).toString();</span>
+<span class="fc" id="L418">        String itemName = createPRTable.getValueAt(0, 1).toString();</span>
+<span class="fc" id="L419">        int itemQuant = Integer.parseInt(createPRTable.getValueAt(0, 2).toString());</span>
+<span class="fc" id="L420">        String pengukuran = createPRTable.getValueAt(0, 3).toString();</span>
+<span class="fc" id="L421">        String remark = createPRTable.getValueAt(0, 4).toString();</span>
+<span class="pc bpc" id="L422" title="3 of 6 branches missed.">        if(prText.getText().equalsIgnoreCase(&quot;&quot;) || userID.getText().equalsIgnoreCase(&quot;&quot;) || reqDate.getDate()==null || </span>
+<span class="pc bpc" id="L423" title="2 of 6 branches missed.">                receDate.getDate()==null || itemID.equalsIgnoreCase(&quot;&quot;) || itemName.equalsIgnoreCase(&quot;Nama Barang&quot;) || </span>
+<span class="pc bpc" id="L424" title="4 of 8 branches missed.">                itemName.equalsIgnoreCase(&quot;&quot;) || remark.equalsIgnoreCase(&quot;&quot;) || remark.equalsIgnoreCase(&quot;Tulis Keterangan&quot;)|| </span>
+<span class="pc bpc" id="L425" title="1 of 2 branches missed.">                itemQuant==0 || isNumeric(userID.getText())==false ){</span>
+<span class="fc" id="L426">           JOptionPane.showMessageDialog(null, &quot;Data harus diisi dengan lengkap dan benar&quot;);</span>
+        }
+        else{
+<span class="fc" id="L429">            createPR();</span>
+<span class="fc" id="L430">            JOptionPane.showMessageDialog(null, &quot;Data Tersimpan&quot;);</span>
+<span class="fc" id="L431">            showMinPR();</span>
+<span class="fc" id="L432">            createPRTable.setFocusable(false);</span>
+<span class="fc" id="L433">            prText.setText(&quot;Nama Purchase Request&quot;);</span>
+<span class="fc" id="L434">            userID.setText(&quot;ID Requester &quot;);</span>
+<span class="fc" id="L435">            createPRTable.setValueAt(&quot;ItemID&quot;, 0, 0);</span>
+<span class="fc" id="L436">            createPRTable.setValueAt(&quot;Nama Barang&quot;, 0, 1);</span>
+<span class="fc" id="L437">            createPRTable.setValueAt(&quot;1&quot;, 0, 2);</span>
+<span class="fc" id="L438">            createPRTable.setValueAt(&quot;Pengukuran&quot;, 0, 3);</span>
+<span class="fc" id="L439">            createPRTable.setValueAt(&quot;Tulis Keterangan&quot;, 0, 4);</span>
+        }
+<span class="fc" id="L441">    }//GEN-LAST:event_submitBtnActionPerformed</span>
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-<span class="fc" id="L451">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+<span class="fc" id="L447">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
-<span class="fc" id="L453">                new DashboardNP().setVisible(true);</span>
-<span class="fc" id="L454">            }</span>
+<span class="fc" id="L449">                new DashboardNP().setVisible(true);</span>
+<span class="fc" id="L450">            }</span>
         });
-<span class="fc" id="L456">    }</span>
+<span class="fc" id="L452">    }</span>
     
-    private void showMinPR(){
-<span class="fc" id="L459">        getData();</span>
-<span class="fc" id="L460">        Object[][] data=new Object[this.listPR.size()][3];</span>
-<span class="fc" id="L461">        int x=0;</span>
-<span class="fc bfc" id="L462" title="All 2 branches covered.">        for(purchaseRequest pr:this.listPR){</span>
-<span class="fc" id="L463">            data[x][0]= pr.getPrID();</span>
-<span class="fc" id="L464">            data[x][1]= pr.getPrName();</span>
-<span class="fc" id="L465">            data[x][2]= pr.getStatusPR();</span>
-<span class="fc" id="L466">            ++x;</span>
-<span class="fc" id="L467">        }</span>
-        
-<span class="fc" id="L469">        Date date = new Date();</span>
-<span class="fc" id="L470">        reqDate.setDate(date);</span>
-<span class="fc" id="L471">        receDate.setDate(date);</span>
-<span class="fc" id="L472">        prTable.setModel(new DefaultTableModel(data,headerPR));</span>
-        
-<span class="fc" id="L474">    }</span>
+    public void getData(){
+<span class="fc" id="L455">        listPR.clear();</span>
+<span class="fc" id="L456">        listStock.clear();</span>
+        try{
+            //Class.forName(&quot;net.ucanaccess.jdbc.UcanaccessDriver&quot;);
+            
+<span class="fc" id="L460">            connection = DriverManager.getConnection(&quot;jdbc:ucanaccess://&quot; + &quot;D:/PurchasingAssistant.accdb;&quot;,&quot;&quot;, &quot;&quot;);</span>
+<span class="fc" id="L461">            System.out.println(&quot;Berhasil konek&quot;);</span>
+<span class="fc" id="L462">                    stmt = connection.createStatement();</span>
+<span class="fc" id="L463">            rsPR = stmt.executeQuery(&quot;SELECT * FROM PR&quot;);</span>
+<span class="fc bfc" id="L464" title="All 2 branches covered.">            while(rsPR.next()){</span>
+<span class="fc" id="L465">                listPR.add(new purchaseRequest(rsPR.getString(&quot;employeeID&quot;), rsPR.getString(&quot;itemID&quot;), </span>
+<span class="fc" id="L466">                        rsPR.getString(&quot;um&quot;), rsPR.getString(&quot;remark&quot;), rsPR.getString(&quot;statusPR&quot;), rsPR.getString(&quot;prName&quot;),</span>
+<span class="fc" id="L467">                        rsPR.getDate(&quot;requestDate&quot;), rsPR.getDate(&quot;receivingDate&quot;), rsPR.getBoolean(&quot;approvalManager&quot;), </span>
+<span class="fc" id="L468">                        rsPR.getInt(&quot;prID&quot;), rsPR.getInt(&quot;quantity&quot;)));</span>
+            } 
+            
+<span class="fc" id="L471">            rsStock = stmt.executeQuery(&quot;SELECT * FROM Warehouse&quot;);</span>
+<span class="fc bfc" id="L472" title="All 2 branches covered.">            while(rsStock.next()){</span>
+<span class="fc" id="L473">                listStock.add(new warehouse(rsStock.getString(&quot;itemID&quot;), rsStock.getString(&quot;itemName&quot;), rsStock.getInt(&quot;endingStock&quot;)));</span>
+<span class="fc" id="L474">                itemID[0] = rsStock.getString(&quot;itemID&quot;);</span>
+            } 
+        }
+<span class="nc" id="L477">        catch(SQLException errMsg)</span>
+        {
+<span class="nc" id="L479">            System.out.println(errMsg.getMessage());</span>
 
-    private void showStock(){
-<span class="fc" id="L477">        getData();</span>
-<span class="fc" id="L478">        Object[][] data=new Object[this.listStock.size()][3];</span>
-<span class="fc" id="L479">        int x=0;</span>
-<span class="fc bfc" id="L480" title="All 2 branches covered.">        for(warehouse wh:this.listStock){</span>
-<span class="fc" id="L481">            data[x][0]= wh.getItemID();</span>
-<span class="fc" id="L482">            data[x][1]= wh.getItemName();</span>
-<span class="fc" id="L483">            data[x][2]= wh.getEndingStock();</span>
-<span class="fc" id="L484">            ++x;</span>
-<span class="fc" id="L485">        }</span>
-<span class="fc" id="L486">        stockTable.setModel(new DefaultTableModel(data,headerStock));</span>
-        
-<span class="fc" id="L488">        Date date = new Date();</span>
-<span class="fc" id="L489">        DateFormat writeFormat = new SimpleDateFormat(&quot;dd/MM/yyyy&quot;);</span>
-<span class="fc" id="L490">        dateStockLabel.setText(&quot;Date: &quot;+writeFormat.format(date));</span>
-<span class="fc" id="L491">    }</span>
+<span class="fc" id="L481">        }</span>
+<span class="fc" id="L482">    }</span>
     
     private void createPR(){
 
-<span class="fc" id="L495">        SimpleDateFormat format = new SimpleDateFormat(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;, Locale.US);</span>
-<span class="fc" id="L496">        DateFormat writeFormat = new SimpleDateFormat( &quot;MM/dd/yyyy&quot;);</span>
-<span class="fc" id="L497">        String req = reqDate.getDate().toString();</span>
-<span class="fc" id="L498">        Date reqdate = null;</span>
+<span class="fc" id="L486">        SimpleDateFormat format = new SimpleDateFormat(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;, Locale.US);</span>
+<span class="fc" id="L487">        DateFormat writeFormat = new SimpleDateFormat( &quot;MM/dd/yyyy&quot;);</span>
+<span class="fc" id="L488">        String req = reqDate.getDate().toString();</span>
+<span class="fc" id="L489">        Date reqdate = null;</span>
         try {
-<span class="fc" id="L500">            reqdate = (Date)format.parse(req);</span>
-<span class="nc" id="L501">        }catch (ParseException ex) {</span>
-<span class="nc" id="L502">            Logger.getLogger(DashboardNP.class.getName()).log(Level.SEVERE, null, ex);</span>
-<span class="fc" id="L503">        }</span>
-<span class="fc" id="L504">        String formattedReqDate = &quot;&quot;;</span>
-<span class="pc bpc" id="L505" title="1 of 2 branches missed.">        if( reqdate != null ) {</span>
-<span class="fc" id="L506">            formattedReqDate = writeFormat.format( reqdate );</span>
+<span class="fc" id="L491">            reqdate = (Date)format.parse(req);</span>
+<span class="nc" id="L492">        }catch (ParseException ex) {</span>
+<span class="nc" id="L493">            Logger.getLogger(DashboardNP.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="fc" id="L494">        }</span>
+<span class="fc" id="L495">        String formattedReqDate = &quot;&quot;;</span>
+<span class="pc bpc" id="L496" title="1 of 2 branches missed.">        if( reqdate != null ) {</span>
+<span class="fc" id="L497">            formattedReqDate = writeFormat.format( reqdate );</span>
         }
         
-<span class="fc" id="L509">        String rece = receDate.getDate().toString();</span>
-<span class="fc" id="L510">        Date recedate = null;</span>
+<span class="fc" id="L500">        String rece = receDate.getDate().toString();</span>
+<span class="fc" id="L501">        Date recedate = null;</span>
         try {
-<span class="fc" id="L512">            recedate = (Date)format.parse(rece);</span>
-<span class="nc" id="L513">        }catch (ParseException ex) {</span>
-<span class="nc" id="L514">            Logger.getLogger(DashboardNP.class.getName()).log(Level.SEVERE, null, ex);</span>
-<span class="fc" id="L515">        }</span>
-<span class="fc" id="L516">        String formattedReceDate = &quot;&quot;;</span>
-<span class="pc bpc" id="L517" title="1 of 2 branches missed.">        if( recedate != null ) {</span>
-<span class="fc" id="L518">            formattedReceDate = writeFormat.format( recedate );</span>
+<span class="fc" id="L503">            recedate = (Date)format.parse(rece);</span>
+<span class="nc" id="L504">        }catch (ParseException ex) {</span>
+<span class="nc" id="L505">            Logger.getLogger(DashboardNP.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="fc" id="L506">        }</span>
+<span class="fc" id="L507">        String formattedReceDate = &quot;&quot;;</span>
+<span class="pc bpc" id="L508" title="1 of 2 branches missed.">        if( recedate != null ) {</span>
+<span class="fc" id="L509">            formattedReceDate = writeFormat.format( recedate );</span>
         }
 
-<span class="fc" id="L521">        String itemID = createPRTable.getValueAt(0, 0).toString();</span>
-<span class="fc" id="L522">        String itemName = createPRTable.getValueAt(0, 1).toString();</span>
-<span class="fc" id="L523">        int itemQuant = Integer.parseInt(createPRTable.getValueAt(0, 2).toString());</span>
-<span class="fc" id="L524">        String pengukuran = createPRTable.getValueAt(0, 3).toString();</span>
-<span class="fc" id="L525">        String remark = createPRTable.getValueAt(0, 4).toString();</span>
+<span class="fc" id="L512">        String itemID = createPRTable.getValueAt(0, 0).toString();</span>
+<span class="fc" id="L513">        String itemName = createPRTable.getValueAt(0, 1).toString();</span>
+<span class="fc" id="L514">        int itemQuant = Integer.parseInt(createPRTable.getValueAt(0, 2).toString());</span>
+<span class="fc" id="L515">        String pengukuran = createPRTable.getValueAt(0, 3).toString();</span>
+<span class="fc" id="L516">        String remark = createPRTable.getValueAt(0, 4).toString();</span>
         String sql;
-<span class="fc" id="L527">        String status = &quot;Waiting for approval&quot;;</span>
-<span class="fc" id="L528">        sql = &quot;INSERT INTO PR (prName, employeeID, requestDate, receivingDate, itemID, quantity, UM, remark, statusPR) &quot; </span>
-<span class="fc" id="L529">                + &quot;VALUES ('&quot;+ prText.getText() +&quot;',&quot;</span>
-<span class="fc" id="L530">                + &quot;'&quot;+ userID.getText() +&quot;',&quot;</span>
+<span class="fc" id="L518">        String status = &quot;Waiting for approval&quot;;</span>
+<span class="fc" id="L519">        sql = &quot;INSERT INTO PR (prName, employeeID, requestDate, receivingDate, itemID, quantity, UM, remark, statusPR) &quot; </span>
+<span class="fc" id="L520">                + &quot;VALUES ('&quot;+ prText.getText() +&quot;',&quot;</span>
+<span class="fc" id="L521">                + &quot;'&quot;+ userID.getText() +&quot;',&quot;</span>
                 + &quot;#&quot;+ formattedReqDate +&quot;#,&quot;
                 + &quot;#&quot;+ formattedReceDate +&quot;#,&quot;
                 + &quot;'&quot;+ itemID +&quot;',&quot;
@@ -537,58 +528,63 @@ public class DashboardNP extends javax.swing.JFrame {
                 + &quot;'&quot;+ status +&quot;') &quot;;
         
         try{
-<span class="fc" id="L540">            int berhasil = stmt.executeUpdate(sql);</span>
-<span class="nc" id="L541">        }catch(SQLException ex){</span>
-<span class="nc" id="L542">            System.out.println(ex.getMessage());</span>
-<span class="fc" id="L543">        }</span>
-<span class="fc" id="L544">    }</span>
-    
+<span class="fc" id="L531">            int berhasil = stmt.executeUpdate(sql);</span>
+<span class="nc" id="L532">        }catch(SQLException ex){</span>
+<span class="nc" id="L533">            System.out.println(ex.getMessage());</span>
+<span class="fc" id="L534">        }</span>
+<span class="fc" id="L535">    }</span>
+        
     public void logout(){
-<span class="fc" id="L547">        int reply = JOptionPane.showConfirmDialog(null, &quot;Apakah anda yakin ingin Logout?&quot;, &quot;Logout?&quot;,  JOptionPane.YES_NO_OPTION);</span>
-<span class="pc bpc" id="L548" title="1 of 2 branches missed.">        if (reply == JOptionPane.YES_OPTION)</span>
+<span class="fc" id="L538">        int reply = JOptionPane.showConfirmDialog(null, &quot;Apakah anda yakin ingin Logout?&quot;, &quot;Logout?&quot;,  JOptionPane.YES_NO_OPTION);</span>
+<span class="fc bfc" id="L539" title="All 2 branches covered.">        if (reply == JOptionPane.YES_OPTION)</span>
         {
-<span class="fc" id="L550">            LoginScreen login = new LoginScreen();</span>
-<span class="fc" id="L551">            login.setVisible(true);</span>
-<span class="fc" id="L552">            this.dispose();</span>
-<span class="fc" id="L553">        }</span>
+<span class="fc" id="L541">            LoginScreen login = new LoginScreen();</span>
+<span class="fc" id="L542">            login.setVisible(true);</span>
+<span class="fc" id="L543">            this.dispose();</span>
+<span class="fc" id="L544">        }</span>
         else{
-<span class="nc" id="L555">            getContentPane().requestFocusInWindow();</span>
+<span class="fc" id="L546">            getContentPane().requestFocusInWindow();</span>
         }
-<span class="fc" id="L557">    }</span>
+<span class="fc" id="L548">    }</span>
+    
+    private void showMinPR(){
+<span class="fc" id="L551">        getData();</span>
+<span class="fc" id="L552">        Object[][] data=new Object[this.listPR.size()][3];</span>
+<span class="fc" id="L553">        int x=0;</span>
+<span class="fc bfc" id="L554" title="All 2 branches covered.">        for(purchaseRequest pr:this.listPR){</span>
+<span class="fc" id="L555">            data[x][0]= pr.getPrID();</span>
+<span class="fc" id="L556">            data[x][1]= pr.getPrName();</span>
+<span class="fc" id="L557">            data[x][2]= pr.getStatusPR();</span>
+<span class="fc" id="L558">            ++x;</span>
+<span class="fc" id="L559">        }</span>
+        
+<span class="fc" id="L561">        Date date = new Date();</span>
+<span class="fc" id="L562">        reqDate.setDate(date);</span>
+<span class="fc" id="L563">        receDate.setDate(date);</span>
+<span class="fc" id="L564">        prTable.setModel(new DefaultTableModel(data,headerPR));</span>
+        
+<span class="fc" id="L566">    }</span>
+
+    private void showStock(){
+<span class="fc" id="L569">        getData();</span>
+<span class="fc" id="L570">        Object[][] data=new Object[this.listStock.size()][3];</span>
+<span class="fc" id="L571">        int x=0;</span>
+<span class="fc bfc" id="L572" title="All 2 branches covered.">        for(warehouse wh:this.listStock){</span>
+<span class="fc" id="L573">            data[x][0]= wh.getItemID();</span>
+<span class="fc" id="L574">            data[x][1]= wh.getItemName();</span>
+<span class="fc" id="L575">            data[x][2]= wh.getEndingStock();</span>
+<span class="fc" id="L576">            ++x;</span>
+<span class="fc" id="L577">        }</span>
+<span class="fc" id="L578">        stockTable.setModel(new DefaultTableModel(data,headerStock));</span>
+        
+<span class="fc" id="L580">        Date date = new Date();</span>
+<span class="fc" id="L581">        DateFormat writeFormat = new SimpleDateFormat(&quot;dd/MM/yyyy&quot;);</span>
+<span class="fc" id="L582">        dateStockLabel.setText(&quot;Date: &quot;+writeFormat.format(date));</span>
+<span class="fc" id="L583">    }</span>
     
     public boolean isNumeric(String s){
-<span class="fc" id="L560">        return s.matches(&quot;[-+]?\\d*\\.?\\d+&quot;);</span>
+<span class="fc" id="L586">        return s.matches(&quot;[-+]?\\d*\\.?\\d+&quot;);</span>
     }
-    
-    public void getData(){
-<span class="fc" id="L564">        listPR.clear();</span>
-<span class="fc" id="L565">        listStock.clear();</span>
-        try{
-            //Class.forName(&quot;net.ucanaccess.jdbc.UcanaccessDriver&quot;);
-            
-<span class="fc" id="L569">            connection = DriverManager.getConnection(&quot;jdbc:ucanaccess://&quot; + &quot;D:/PurchasingAssistant.accdb;&quot;,&quot;&quot;, &quot;&quot;);</span>
-<span class="fc" id="L570">            System.out.println(&quot;Berhasil konek&quot;);</span>
-<span class="fc" id="L571">                    stmt = connection.createStatement();</span>
-<span class="fc" id="L572">            rsPR = stmt.executeQuery(&quot;SELECT * FROM PR&quot;);</span>
-<span class="fc bfc" id="L573" title="All 2 branches covered.">            while(rsPR.next()){</span>
-<span class="fc" id="L574">                listPR.add(new purchaseRequest(rsPR.getString(&quot;employeeID&quot;), rsPR.getString(&quot;itemID&quot;), </span>
-<span class="fc" id="L575">                        rsPR.getString(&quot;um&quot;), rsPR.getString(&quot;remark&quot;), rsPR.getString(&quot;statusPR&quot;), rsPR.getString(&quot;prName&quot;),</span>
-<span class="fc" id="L576">                        rsPR.getDate(&quot;requestDate&quot;), rsPR.getDate(&quot;receivingDate&quot;), rsPR.getBoolean(&quot;approvalManager&quot;), </span>
-<span class="fc" id="L577">                        rsPR.getInt(&quot;prID&quot;), rsPR.getInt(&quot;quantity&quot;)));</span>
-            } 
-            
-<span class="fc" id="L580">            rsStock = stmt.executeQuery(&quot;SELECT * FROM Warehouse&quot;);</span>
-<span class="fc bfc" id="L581" title="All 2 branches covered.">            while(rsStock.next()){</span>
-<span class="fc" id="L582">                listStock.add(new warehouse(rsStock.getString(&quot;itemID&quot;), rsStock.getString(&quot;itemName&quot;), rsStock.getInt(&quot;endingStock&quot;)));</span>
-<span class="fc" id="L583">                itemID[0] = rsStock.getString(&quot;itemID&quot;);</span>
-            } 
-        }
-<span class="nc" id="L586">        catch(SQLException errMsg)</span>
-        {
-<span class="nc" id="L588">            System.out.println(errMsg.getMessage());</span>
-
-<span class="fc" id="L590">        }</span>
-<span class="fc" id="L591">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane Tab;
@@ -614,5 +610,6 @@ public class DashboardNP extends javax.swing.JFrame {
     private javax.swing.JLabel userLabel;
     private javax.swing.JLabel userLabel1;
     // End of variables declaration//GEN-END:variables
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
