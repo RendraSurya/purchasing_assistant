@@ -148,6 +148,10 @@ public class LoginScreen extends javax.swing.JFrame {
         //this.dispose();
     }
     
+    public boolean isNumeric(String s){
+        return s.matches("[-+]?\\d*\\.?\\d+");
+    }
+    
     /**
      * @param args the command line arguments
      */
