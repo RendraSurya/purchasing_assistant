@@ -52,6 +52,16 @@ public class DashboardNP extends javax.swing.JFrame {
         initComponents();
         getContentPane().requestFocusInWindow();
         this.setIconImage(new ImageIcon(getClass().getResource("/image/icon.png")).getImage());
+        showMinPR();
+        showStock();
+        JComboBox itemc= new JComboBox(comboItem);
+        TableColumn itc= createPRTable.getColumnModel().getColumn(0);
+        TableCellEditor itce = new DefaultCellEditor(itemc);
+        itc.setCellEditor(itce);
+        JComboBox umc= new JComboBox(comboUM);
+        TableColumn utc= createPRTable.getColumnModel().getColumn(3);
+        TableCellEditor utce = new DefaultCellEditor(umc);
+        utc.setCellEditor(utce);
         
         
     }
