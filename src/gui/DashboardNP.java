@@ -369,6 +369,7 @@ public class DashboardNP extends javax.swing.JFrame {
 
     private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
         // TODO add your handling code here:
+        logout();
     }//GEN-LAST:event_logoutBtnActionPerformed
 
     private void prTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_prTextFocusGained
