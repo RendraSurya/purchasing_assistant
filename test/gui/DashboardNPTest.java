@@ -58,7 +58,27 @@ public class DashboardNPTest {
         
     }
     
+     @Test
+    public void testMain() {
+        System.out.println("main");
+        String[] args = null;
+        DashboardNP.main(args);
+    }
     
+    @Test
+    public void tabTest(){
+        dashw.tabbedPane().requireTitle("Dashboard", atIndex(0));
+        dashw.tabbedPane().requireTitle("Purchase Request", atIndex(1));
+        dashw.tabbedPane().requireTitle("Warehouse", atIndex(2));
+        //tab dashboard
+        dashw.tabbedPane().selectTab( 0 );
+        JTableFixture table1 = dashw.table( "prTable" );
+        table1.requireVisible();
+        //tab Warehouse
+        dashw.tabbedPane().selectTab( 2 );
+        JTableFixture stockTable = dashw.table( "stockTable" );
+        stockTable.requireVisible();
+    }
     
       
 }
