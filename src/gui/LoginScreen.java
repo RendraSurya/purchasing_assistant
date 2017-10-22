@@ -6,6 +6,11 @@
 package gui;
 
 import java.awt.Image;
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 
@@ -14,7 +19,10 @@ import javax.swing.ImageIcon;
  * @author Windows 10
  */
 public class LoginScreen extends javax.swing.JFrame {
-   
+    Connection connection;
+    Statement stmt;
+    ResultSet rsEmployee;
+    
     public LoginScreen() {
         initComponents();
         getContentPane().requestFocusInWindow();
@@ -119,6 +127,27 @@ public class LoginScreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_passPgwTxtFocusLost
 
+    public boolean validateUser(String username, String password){
+        try{
+            //Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+            connection = DriverManager.getConnection("jdbc:ucanaccess://" + "D:/PurchasingAssistant.accdb;","", "");
+            System.out.println("Berhasil konek");
+                    stmt = connection.createStatement();
+            rsEmployee = stmt.executeQuery("SELECT * FROM Employee");
+            while(rsEmployee.next()){
+                if((rsEmployee.getString("employeeID").equals(username)&&rsEmployee.getString("password").equals(password))){
+                    return true;
+                }
+            } 
+        }
+        catch(SQLException errMsg)
+        {
+            System.out.println(errMsg.getMessage());
+        }
+        return false;
+        //this.dispose();
+    }
+    
     /**
      * @param args the command line arguments
      */
