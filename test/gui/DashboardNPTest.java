@@ -103,5 +103,21 @@ public class DashboardNPTest {
         dashw.button("submitBtn").click();
         dashw.optionPane().requireMessage("Data harus diisi dengan lengkap dan benar");
     }
+    
+    @Test
+    public void logoutTest(){
+        dashw.button("logoutBtn").click();
+        dashw.optionPane().requireMessage("Apakah anda yakin ingin Logout?");
+        dashw.optionPane().yesButton().click();
+        dashw.cleanUp();
+                
+    }
+    
+    @Test
+    public void failLogoutTest(){
+        dashw.button("logoutBtn").click();
+        dashw.optionPane().requireMessage("Apakah anda yakin ingin Logout?");
+        dashw.optionPane().noButton().click();     
+    }
       
 }
