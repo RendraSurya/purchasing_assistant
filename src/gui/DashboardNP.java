@@ -412,6 +412,35 @@ public class DashboardNP extends javax.swing.JFrame {
         });
     }
     
+    public void getData(){
+        listPR.clear();
+        listStock.clear();
+        try{
+            //Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+            
+            connection = DriverManager.getConnection("jdbc:ucanaccess://" + "D:/PurchasingAssistant.accdb;","", "");
+            System.out.println("Berhasil konek");
+                    stmt = connection.createStatement();
+            rsPR = stmt.executeQuery("SELECT * FROM PR");
+            while(rsPR.next()){
+                listPR.add(new purchaseRequest(rsPR.getString("employeeID"), rsPR.getString("itemID"), 
+                        rsPR.getString("um"), rsPR.getString("remark"), rsPR.getString("statusPR"), rsPR.getString("prName"),
+                        rsPR.getDate("requestDate"), rsPR.getDate("receivingDate"), rsPR.getBoolean("approvalManager"), 
+                        rsPR.getInt("prID"), rsPR.getInt("quantity")));
+            } 
+            
+            rsStock = stmt.executeQuery("SELECT * FROM Warehouse");
+            while(rsStock.next()){
+                listStock.add(new warehouse(rsStock.getString("itemID"), rsStock.getString("itemName"), rsStock.getInt("endingStock")));
+                itemID[0] = rsStock.getString("itemID");
+            } 
+        }
+        catch(SQLException errMsg)
+        {
+            System.out.println(errMsg.getMessage());
+
+        }
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
