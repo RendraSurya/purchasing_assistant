@@ -13,6 +13,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -82,6 +83,11 @@ public class LoginScreen extends javax.swing.JFrame {
         loginBtn.setBorder(null);
         loginBtn.setLabel("Login");
         loginBtn.setName("loginBtn"); // NOI18N
+        loginBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginBtnActionPerformed(evt);
+            }
+        });
         getContentPane().add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 500, 120, 38));
 
         BG.setForeground(new java.awt.Color(153, 153, 153));
@@ -126,6 +132,27 @@ public class LoginScreen extends javax.swing.JFrame {
             passPgwTxt.setText("Password");
         }
     }//GEN-LAST:event_passPgwTxtFocusLost
+
+    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
+        String username= noPgwTxt.getText();
+        String password= passPgwTxt.getText();
+        if(isNumeric(username)&&!username.equalsIgnoreCase("Nomor Pegawai")&&!password.equalsIgnoreCase("Password")){
+            if(validateUser(username,password)){
+            DashboardNP dashboard=new DashboardNP();
+                    dashboard.setVisible(true);
+                    this.dispose();
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Login Gagal, Isi Data Dengan Benar");
+            }
+        }
+        else if(username.equalsIgnoreCase("Nomor Pegawai")&&password.equalsIgnoreCase("Password")){
+            JOptionPane.showMessageDialog(null,"Nomor Pegawai dan Password Tidak Boleh Kosong");
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Nomor Pegawai Harus Dalam Angka");
+        }        
+    }//GEN-LAST:event_loginBtnActionPerformed
 
     public boolean validateUser(String username, String password){
         try{
