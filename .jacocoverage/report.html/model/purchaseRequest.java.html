@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>purchaseRequest.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Purchasing_Assistant&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">model</a> &gt; <span class="el_source">purchaseRequest.java</span></div><h1>purchaseRequest.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package model;
+
+import java.util.Date;
+
+/**
+ *
+ * @author Windows 10
+ */
+public class purchaseRequest {
+    String employeeID, itemID, um, remark, statusPR, prName; 
+    Date requestDate, receivingDate;
+    boolean approvalManager;
+    int prID, quantity ;
+
+<span class="fc" id="L20">    public purchaseRequest(String employeeID, String itemID, String um, String remark, String statusPR, String prName, Date requestDate, Date receivingDate, boolean approvalManager, int prID, int quantity) {</span>
+<span class="fc" id="L21">        this.employeeID = employeeID;</span>
+<span class="fc" id="L22">        this.itemID = itemID;</span>
+<span class="fc" id="L23">        this.um = um;</span>
+<span class="fc" id="L24">        this.remark = remark;</span>
+<span class="fc" id="L25">        this.statusPR = statusPR;</span>
+<span class="fc" id="L26">        this.prName = prName;</span>
+<span class="fc" id="L27">        this.requestDate = requestDate;</span>
+<span class="fc" id="L28">        this.receivingDate = receivingDate;</span>
+<span class="fc" id="L29">        this.approvalManager = approvalManager;</span>
+<span class="fc" id="L30">        this.prID = prID;</span>
+<span class="fc" id="L31">        this.quantity = quantity;</span>
+<span class="fc" id="L32">    }</span>
+
+    public String getEmployeeID() {
+<span class="nc" id="L35">        return employeeID;</span>
+    }
+
+    public void setEmployeeID(String employeeID) {
+<span class="nc" id="L39">        this.employeeID = employeeID;</span>
+<span class="nc" id="L40">    }</span>
+
+    public String getItemID() {
+<span class="nc" id="L43">        return itemID;</span>
+    }
+
+    public void setItemID(String itemID) {
+<span class="nc" id="L47">        this.itemID = itemID;</span>
+<span class="nc" id="L48">    }</span>
+
+    public String getUm() {
+<span class="nc" id="L51">        return um;</span>
+    }
+
+    public void setUm(String um) {
+<span class="nc" id="L55">        this.um = um;</span>
+<span class="nc" id="L56">    }</span>
+
+    public String getRemark() {
+<span class="nc" id="L59">        return remark;</span>
+    }
+
+    public void setRemark(String remark) {
+<span class="nc" id="L63">        this.remark = remark;</span>
+<span class="nc" id="L64">    }</span>
+
+    public String getStatusPR() {
+<span class="fc" id="L67">        return statusPR;</span>
+    }
+
+    public void setStatusPR(String statusPR) {
+<span class="nc" id="L71">        this.statusPR = statusPR;</span>
+<span class="nc" id="L72">    }</span>
+
+    public Date getRequestDate() {
+<span class="nc" id="L75">        return requestDate;</span>
+    }
+
+    public void setRequestDate(Date requestDate) {
+<span class="nc" id="L79">        this.requestDate = requestDate;</span>
+<span class="nc" id="L80">    }</span>
+
+    public Date getReceivingDate() {
+<span class="nc" id="L83">        return receivingDate;</span>
+    }
+
+    public void setReceivingDate(Date receivingDate) {
+<span class="nc" id="L87">        this.receivingDate = receivingDate;</span>
+<span class="nc" id="L88">    }</span>
+
+    public boolean isApprovalManager() {
+<span class="nc" id="L91">        return approvalManager;</span>
+    }
+
+    public void setApprovalManager(boolean approvalManager) {
+<span class="nc" id="L95">        this.approvalManager = approvalManager;</span>
+<span class="nc" id="L96">    }</span>
+
+    public int getPrID() {
+<span class="fc" id="L99">        return prID;</span>
+    }
+
+    public void setPrID(int prID) {
+<span class="nc" id="L103">        this.prID = prID;</span>
+<span class="nc" id="L104">    }</span>
+
+    public int getQuantity() {
+<span class="nc" id="L107">        return quantity;</span>
+    }
+
+    public void setQuantity(int quantity) {
+<span class="nc" id="L111">        this.quantity = quantity;</span>
+<span class="nc" id="L112">    }</span>
+
+    public String getPrName() {
+<span class="fc" id="L115">        return prName;</span>
+    }
+
+    public void setPrName(String prName) {
+<span class="nc" id="L119">        this.prName = prName;</span>
+<span class="nc" id="L120">    }</span>
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
