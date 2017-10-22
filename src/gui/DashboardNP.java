@@ -80,6 +80,8 @@ public class DashboardNP extends javax.swing.JFrame {
         submitBtn = new javax.swing.JButton();
         userLabel1 = new javax.swing.JLabel();
         userID = new javax.swing.JTextField();
+        reqDate = new org.jdesktop.swingx.JXDatePicker();
+        receDate = new org.jdesktop.swingx.JXDatePicker();
         ImageIcon icon3 = new ImageIcon(getClass().getResource("/image/dashboardNP3.png")); Image image3 = icon3.getImage();
         jDesktopPane3 = new javax.swing.JDesktopPane(){
             public void paintComponent(Graphics g){
@@ -278,6 +280,12 @@ public class DashboardNP extends javax.swing.JFrame {
             }
         });
         panelPR.add(userID, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 59, 211, 35));
+
+        reqDate.setName("reqDate"); // NOI18N
+        panelPR.add(reqDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 106, 211, 35));
+
+        receDate.setName("receDate"); // NOI18N
+        panelPR.add(receDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 151, 211, 35));
 
         Tab.addTab("Purchase Request", panelPR);
 
@@ -497,6 +505,41 @@ public class DashboardNP extends javax.swing.JFrame {
         }
     }
     
+    private void showMinPR(){
+        getData();
+        Object[][] data=new Object[this.listPR.size()][3];
+        int x=0;
+        for(purchaseRequest pr:this.listPR){
+            data[x][0]= pr.getPrID();
+            data[x][1]= pr.getPrName();
+            data[x][2]= pr.getStatusPR();
+            ++x;
+        }
+        
+        Date date = new Date();
+        reqDate.setDate(date);
+        receDate.setDate(date);
+        prTable.setModel(new DefaultTableModel(data,headerPR));
+        
+    }
+
+    private void showStock(){
+        getData();
+        Object[][] data=new Object[this.listStock.size()][3];
+        int x=0;
+        for(warehouse wh:this.listStock){
+            data[x][0]= wh.getItemID();
+            data[x][1]= wh.getItemName();
+            data[x][2]= wh.getEndingStock();
+            ++x;
+        }
+        stockTable.setModel(new DefaultTableModel(data,headerStock));
+        
+        Date date = new Date();
+        DateFormat writeFormat = new SimpleDateFormat("dd/MM/yyyy");
+        dateStockLabel.setText("Date: "+writeFormat.format(date));
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane Tab;
@@ -509,7 +552,9 @@ public class DashboardNP extends javax.swing.JFrame {
     private javax.swing.JDesktopPane panelPR;
     private javax.swing.JTable prTable;
     private javax.swing.JTextField prText;
+    private org.jdesktop.swingx.JXDatePicker receDate;
     private javax.swing.JLabel receivingDateLabel;
+    private org.jdesktop.swingx.JXDatePicker reqDate;
     private javax.swing.JLabel requestDateLabel;
     private javax.swing.JScrollPane scrollCreatePR;
     private javax.swing.JScrollPane scrollDashboard;
@@ -520,4 +565,5 @@ public class DashboardNP extends javax.swing.JFrame {
     private javax.swing.JLabel userLabel;
     private javax.swing.JLabel userLabel1;
     // End of variables declaration//GEN-END:variables
+
 }
