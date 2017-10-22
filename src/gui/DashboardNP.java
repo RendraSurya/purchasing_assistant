@@ -262,6 +262,11 @@ public class DashboardNP extends javax.swing.JFrame {
         submitBtn.setToolTipText("");
         submitBtn.setBorder(null);
         submitBtn.setName("submitBtn"); // NOI18N
+        submitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitBtnActionPerformed(evt);
+            }
+        });
         panelPR.add(submitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 520, 95, 31));
 
         userLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -397,6 +402,33 @@ public class DashboardNP extends javax.swing.JFrame {
             userID.setText("");
         }
     }//GEN-LAST:event_userIDFocusGained
+
+    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
+        String itemID = createPRTable.getValueAt(0, 0).toString();
+        String itemName = createPRTable.getValueAt(0, 1).toString();
+        int itemQuant = Integer.parseInt(createPRTable.getValueAt(0, 2).toString());
+        String pengukuran = createPRTable.getValueAt(0, 3).toString();
+        String remark = createPRTable.getValueAt(0, 4).toString();
+        if(prText.getText().equalsIgnoreCase("") || userID.getText().equalsIgnoreCase("") || reqDate.getDate()==null || 
+                receDate.getDate()==null || itemID.equalsIgnoreCase("") || itemName.equalsIgnoreCase("Nama Barang") || 
+                itemName.equalsIgnoreCase("") || remark.equalsIgnoreCase("") || remark.equalsIgnoreCase("Tulis Keterangan")|| 
+                itemQuant==0 || isNumeric(userID.getText())==false ){
+           JOptionPane.showMessageDialog(null, "Data harus diisi dengan lengkap dan benar");
+        }
+        else{
+            createPR();
+            JOptionPane.showMessageDialog(null, "Data Tersimpan");
+            showMinPR();
+            createPRTable.setFocusable(false);
+            prText.setText("Nama Purchase Request");
+            userID.setText("ID Requester ");
+            createPRTable.setValueAt("ItemID", 0, 0);
+            createPRTable.setValueAt("Nama Barang", 0, 1);
+            createPRTable.setValueAt("1", 0, 2);
+            createPRTable.setValueAt("Pengukuran", 0, 3);
+            createPRTable.setValueAt("Tulis Keterangan", 0, 4);
+        }
+    }//GEN-LAST:event_submitBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -540,6 +572,9 @@ public class DashboardNP extends javax.swing.JFrame {
         dateStockLabel.setText("Date: "+writeFormat.format(date));
     }
     
+    public boolean isNumeric(String s){
+        return s.matches("[-+]?\\d*\\.?\\d+");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane Tab;
