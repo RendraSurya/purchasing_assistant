@@ -74,8 +74,6 @@ public class DashboardNP extends javax.swing.JFrame {
         prText = new javax.swing.JTextField();
         userLabel = new javax.swing.JLabel();
         requestDateLabel = new javax.swing.JLabel();
-        reqDate = new org.jdesktop.swingx.JXDatePicker();
-        receDate = new org.jdesktop.swingx.JXDatePicker();
         receivingDateLabel = new javax.swing.JLabel();
         scrollCreatePR = new javax.swing.JScrollPane();
         createPRTable = new javax.swing.JTable();
@@ -210,16 +208,6 @@ public class DashboardNP extends javax.swing.JFrame {
         requestDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         requestDateLabel.setText("Request Date");
         panelPR.add(requestDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
-
-        reqDate.setFocusable(false);
-        reqDate.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        reqDate.setName("reqDate"); // NOI18N
-        panelPR.add(reqDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 106, 211, 35));
-
-        receDate.setFocusable(false);
-        receDate.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        receDate.setName("receDate"); // NOI18N
-        panelPR.add(receDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 151, 211, 35));
 
         receivingDateLabel.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         receivingDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -442,6 +430,59 @@ public class DashboardNP extends javax.swing.JFrame {
         }
     }
     
+        private void createPR(){
+
+        SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.US);
+        DateFormat writeFormat = new SimpleDateFormat( "MM/dd/yyyy");
+        String req = reqDate.getDate().toString();
+        Date reqdate = null;
+        try {
+            reqdate = (Date)format.parse(req);
+        }catch (ParseException ex) {
+            Logger.getLogger(DashboardNP.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String formattedReqDate = "";
+        if( reqdate != null ) {
+            formattedReqDate = writeFormat.format( reqdate );
+        }
+        
+        String rece = receDate.getDate().toString();
+        Date recedate = null;
+        try {
+            recedate = (Date)format.parse(rece);
+        }catch (ParseException ex) {
+            Logger.getLogger(DashboardNP.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String formattedReceDate = "";
+        if( recedate != null ) {
+            formattedReceDate = writeFormat.format( recedate );
+        }
+
+        String itemID = createPRTable.getValueAt(0, 0).toString();
+        String itemName = createPRTable.getValueAt(0, 1).toString();
+        int itemQuant = Integer.parseInt(createPRTable.getValueAt(0, 2).toString());
+        String pengukuran = createPRTable.getValueAt(0, 3).toString();
+        String remark = createPRTable.getValueAt(0, 4).toString();
+        String sql;
+        String status = "Waiting for approval";
+        sql = "INSERT INTO PR (prName, employeeID, requestDate, receivingDate, itemID, quantity, UM, remark, statusPR) " 
+                + "VALUES ('"+ prText.getText() +"',"
+                + "'"+ userID.getText() +"',"
+                + "#"+ formattedReqDate +"#,"
+                + "#"+ formattedReceDate +"#,"
+                + "'"+ itemID +"',"
+                + "'"+ itemQuant +"',"
+                + "'"+ pengukuran +"',"
+                + "'"+ remark +"',"
+                + "'"+ status +"') ";
+        
+        try{
+            int berhasil = stmt.executeUpdate(sql);
+        }catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane Tab;
@@ -454,9 +495,7 @@ public class DashboardNP extends javax.swing.JFrame {
     private javax.swing.JDesktopPane panelPR;
     private javax.swing.JTable prTable;
     private javax.swing.JTextField prText;
-    private org.jdesktop.swingx.JXDatePicker receDate;
     private javax.swing.JLabel receivingDateLabel;
-    private org.jdesktop.swingx.JXDatePicker reqDate;
     private javax.swing.JLabel requestDateLabel;
     private javax.swing.JScrollPane scrollCreatePR;
     private javax.swing.JScrollPane scrollDashboard;
