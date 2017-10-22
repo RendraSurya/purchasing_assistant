@@ -119,5 +119,33 @@ public class LoginScreenTest {
         assertFalse(result);
     }
     
+    @Test
+    public void noUserTest(){
+        LoginScreen login = new LoginScreen();
+        window.textBox("noPgwTxt").enterText("");
+        window.textBox("passPgwTxt").enterText("weny7397");
+        window.button("loginBtn").click();
+        String noPgw = "";
+        String passPgw = "weny7397";
+        boolean result=login.validateUser(noPgw,passPgw);
+        assertFalse(result);
+    }
     
+    @Test
+    public void noPassTest(){
+        LoginScreen login = new LoginScreen();
+        window.textBox("noPgwTxt").enterText("199703070020");
+        window.textBox("passPgwTxt").enterText("");
+        window.button("loginBtn").click();
+        String noPgw = "199703070020";
+        String passPgw = "";
+        boolean result=login.validateUser(noPgw,passPgw);
+        assertFalse(result);
+    }
+    
+    public void isNumericTest(){
+        String numeric="123";
+        LoginScreen login = new LoginScreen();
+        assertTrue(login.isNumeric(numeric));
+    }
 }
