@@ -119,5 +119,52 @@ public class DashboardNPTest {
         dashw.optionPane().requireMessage("Apakah anda yakin ingin Logout?");
         dashw.optionPane().noButton().click();     
     }
+    
+    @Test
+    public void createPRTest1(){
+        dashw.tabbedPane().selectTab( 1 );
+        JTableFixture table2 = dashw.table( "createPRTable" );
+        dashw.textBox("prText").enterText("Pengadaan Mouse");
+        dashw.textBox("userID").enterText("199703070020");
+        table2.cell(row(0).column(0)).requireValue("Item ID").enterValue("MLG2417").requireValue("MLG2417");
+        table2.cell(row(0).column(1)).requireValue("Nama Barang").enterValue("Mouse Logitech").requireValue("Mouse Logitech");
+        table2.cell(row(0).column(2)).requireValue("1").enterValue("2").requireValue("2");
+        table2.cell(row(0).column(3)).requireValue("Pengukuran").enterValue("pcs").requireValue("pcs");
+        table2.cell(row(0).column(4)).requireValue("Tulis Keterangan").enterValue("Pengganti Rusak").requireValue("Pengganti Rusak");
+        dashw.button("submitBtn").click();
+        dashw.optionPane().requireMessage("Data Tersimpan");
+    }
+    
+    @Test
+    public void createdbPRTest(){
+        try {
+            connection = DriverManager.getConnection("jdbc:ucanaccess://" + "D:/PurchasingAssistant.accdb;","", "");
+            stmt = connection.createStatement();
+            rsStock = stmt.executeQuery("SELECT * FROM PR");
+            while(rsStock.next()){
+                counter++;
+            }
+            dashw.tabbedPane().selectTab( 1 );
+            JTableFixture table2 = dashw.table( "createPRTable" );
+            dashw.textBox("prText").enterText("Pengadaan Mouse");
+            dashw.textBox("userID").enterText("199703070020");
+            table2.cell(row(0).column(0)).requireValue("Item ID").enterValue("MLG2417").requireValue("MLG2417");
+            table2.cell(row(0).column(1)).requireValue("Nama Barang").enterValue("Mouse Logitech").requireValue("Mouse Logitech");
+            table2.cell(row(0).column(2)).requireValue("1").enterValue("2").requireValue("2");
+            table2.cell(row(0).column(3)).requireValue("Pengukuran").enterValue("pcs").requireValue("pcs");
+            table2.cell(row(0).column(4)).requireValue("Tulis Keterangan").enterValue("Pengganti Rusak").requireValue("Pengganti Rusak");
+            dashw.button("submitBtn").click();
+            
+            rsStock = stmt.executeQuery("SELECT * FROM PR");
+            while(rsStock.next()){
+                counter2++;
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DashboardNPTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        assertEquals(counter+1,counter2);
+    }
       
 }
