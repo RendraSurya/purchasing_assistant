@@ -67,7 +67,7 @@ public class LoginScreenTest {
         window.textBox("noPgwTxt").enterText("");
         window.textBox("passPgwTxt").enterText("");
         window.button("loginBtn").click();
-        window.optionPane().requireMessage("Nomor Pegawai Harus Dalam Angka");
+        window.optionPane().requireMessage("Nomor Pegawai dan Password Tidak Boleh Kosong");
         
     }
     

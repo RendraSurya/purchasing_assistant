@@ -292,13 +292,13 @@
                         <Column editable="true" title="Item ID" type="java.lang.String">
                           <Data value="Item ID"/>
                         </Column>
-                        <Column editable="true" title="Item Name" type="java.lang.String">
+                        <Column editable="false" title="Item Name" type="java.lang.String">
                           <Data value="Nama Barang"/>
                         </Column>
                         <Column editable="true" title="Quantity" type="java.lang.Integer">
                           <Data value="1"/>
                         </Column>
-                        <Column editable="true" title="UM" type="java.lang.String">
+                        <Column editable="false" title="UM" type="java.lang.String">
                           <Data value="Pengukuran"/>
                         </Column>
                         <Column editable="true" title="Remark" type="java.lang.String">
@@ -346,6 +346,9 @@
                       <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="createPRTablePropertyChange"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

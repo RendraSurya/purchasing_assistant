@@ -45,7 +45,7 @@ public class DashboardNP extends javax.swing.JFrame {
     ArrayList<warehouse> listStock= new ArrayList<warehouse>();
     String[] headerPR= {"Purchase Request ID","Purchase Request Name","Status Purchase Request"}; 
     String[] headerStock= {"Item ID","Item Name","Ending Stock"}; 
-    String[] comboItem={"MLG2417", "KAS4402", "KAS5042"};
+    String[] comboItem={"MLG2417", "KAS4402", "PEP5248"};
     String[] comboUM={"pcs", "pack", "eksemplar"};
   
     public DashboardNP() {
@@ -243,9 +243,16 @@ public class DashboardNP extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                true, false, true, false, true
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         createPRTable.setToolTipText("");
@@ -254,6 +261,11 @@ public class DashboardNP extends javax.swing.JFrame {
         createPRTable.setName("createPRTable"); // NOI18N
         createPRTable.setRowHeight(27);
         createPRTable.getTableHeader().setReorderingAllowed(false);
+        createPRTable.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                createPRTablePropertyChange(evt);
+            }
+        });
         scrollCreatePR.setViewportView(createPRTable);
         if (createPRTable.getColumnModel().getColumnCount() > 0) {
             createPRTable.getColumnModel().getColumn(0).setResizable(false);
@@ -439,6 +451,25 @@ public class DashboardNP extends javax.swing.JFrame {
             createPRTable.setValueAt("Tulis Keterangan", 0, 4);
         }
     }//GEN-LAST:event_submitBtnActionPerformed
+
+    private void createPRTablePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_createPRTablePropertyChange
+        // TODO add your handling code here:
+        String itemID = createPRTable.getValueAt(0, 0).toString();
+        switch(itemID){
+            case "MLG2417":
+                createPRTable.setValueAt("Mouse Logitech",0,1);
+                createPRTable.setValueAt("pcs",0,3);
+                break;
+            case "KAS4402":
+                createPRTable.setValueAt("Laptop Asus",0,1);
+                createPRTable.setValueAt("pcs",0,3);
+                break;
+            case "PEP5248":
+                createPRTable.setValueAt("Printer EPSON",0,1);
+                createPRTable.setValueAt("pcs",0,3);
+                break;
+        }
+    }//GEN-LAST:event_createPRTablePropertyChange
 
     /**
      * @param args the command line arguments
